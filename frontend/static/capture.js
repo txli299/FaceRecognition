@@ -2,7 +2,7 @@
   // The width and height of the captured photo. We will set the
   // width to the value defined here, but the height will be
   // calculated based on the aspect ratio of the input stream.
-  var backend_host = "https://cliffbackend.azurewebsites.net";
+  var backend_host = "";
 
   var width = 320;    // We will scale the photo width to this
   var height = 0;     // This will be computed based on the input stream
