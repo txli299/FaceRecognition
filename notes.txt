@@ -1,0 +1,365 @@
+Requesting a Cloud Shell.Succeeded. 
+Connecting terminal...
+
+Welcome to Azure Cloud Shell
+
+Type "az" to use Azure CLI
+Type "help" to learn about Cloud Shell
+
+tuoxin [ ~ ]$ ^[[200~az aks create \
+>     --resource-group K8s \
+>     --name myAKSCluster \
+>     --node-count 2 \
+>     --generate-ssh-keys \
+>     --attach-acr codewithcliff
+bash: $'\E[200~az': command not found
+tuoxin [ ~ ]$ az aks create     --resource-group K8s     --name myAKSCluster     --node-count 2     --generate-ssh-keys     --attach-acr codewithcliff
+SSH key files '/home/tuoxin/.ssh/id_rsa' and '/home/tuoxin/.ssh/id_rsa.pub' have been generated under ~/.ssh to allow SSH access to the VM. If using machines without permanent storage like Azure Cloud Shell without an attached file share, back up your keys to a safe location
+Resource provider 'Microsoft.ContainerService' used by this operation is not registered. We are registering for you.
+Registration succeeded.
+AAD role propagation done[############################################]  100.0000%{
+  "aadProfile": null,
+  "addonProfiles": null,
+  "agentPoolProfiles": [
+    {
+      "availabilityZones": null,
+      "count": 2,
+      "creationData": null,
+      "currentOrchestratorVersion": "1.25.6",
+      "enableAutoScaling": false,
+      "enableEncryptionAtHost": false,
+      "enableFips": false,
+      "enableNodePublicIp": false,
+      "enableUltraSsd": false,
+      "gpuInstanceProfile": null,
+      "hostGroupId": null,
+      "kubeletConfig": null,
+      "kubeletDiskType": "OS",
+      "linuxOsConfig": null,
+      "maxCount": null,
+      "maxPods": 110,
+      "minCount": null,
+      "mode": "System",
+      "name": "nodepool1",
+      "nodeImageVersion": "AKSUbuntu-2204gen2containerd-202307.04.0",
+      "nodeLabels": null,
+      "nodePublicIpPrefixId": null,
+      "nodeTaints": null,
+      "orchestratorVersion": "1.25.6",
+      "osDiskSizeGb": 128,
+      "osDiskType": "Managed",
+      "osSku": "Ubuntu",
+      "osType": "Linux",
+      "podSubnetId": null,
+      "powerState": {
+        "code": "Running"
+      },
+      "provisioningState": "Succeeded",
+      "proximityPlacementGroupId": null,
+      "scaleDownMode": null,
+      "scaleSetEvictionPolicy": null,
+      "scaleSetPriority": null,
+      "spotMaxPrice": null,
+      "tags": null,
+      "type": "VirtualMachineScaleSets",
+      "upgradeSettings": {
+        "maxSurge": null
+      },
+      "vmSize": "Standard_DS2_v2",
+      "vnetSubnetId": null,
+      "workloadRuntime": null
+    }
+  ],
+  "apiServerAccessProfile": null,
+  "autoScalerProfile": null,
+  "autoUpgradeProfile": null,
+  "azureMonitorProfile": null,
+  "azurePortalFqdn": "myaksclust-k8s-207110-oi88ywhp.portal.hcp.eastus.azmk8s.io",
+  "currentKubernetesVersion": "1.25.6",
+  "disableLocalAccounts": false,
+  "diskEncryptionSetId": null,
+  "dnsPrefix": "myAKSClust-K8s-207110",
+  "enablePodSecurityPolicy": null,
+  "enableRbac": true,
+  "extendedLocation": null,
+  "fqdn": "myaksclust-k8s-207110-oi88ywhp.hcp.eastus.azmk8s.io",
+  "fqdnSubdomain": null,
+  "httpProxyConfig": null,
+  "id": "/subscriptions/207110bf-3935-4cb4-a373-2aab072daf4c/resourcegroups/K8s/providers/Microsoft.ContainerService/managedClusters/myAKSCluster",
+  "identity": {
+    "principalId": "b269a8b0-76f9-47a9-9bfb-df8cb650d20e",
+    "tenantId": "a8eec281-aaa3-4dae-ac9b-9a398b9215e7",
+    "type": "SystemAssigned",
+    "userAssignedIdentities": null
+  },
+  "identityProfile": {
+    "kubeletidentity": {
+      "clientId": "7726d752-7521-48b5-8e80-1897ab8ae243",
+      "objectId": "b5bf5f46-3a08-40fc-924f-814c33c2b7c1",
+      "resourceId": "/subscriptions/207110bf-3935-4cb4-a373-2aab072daf4c/resourcegroups/MC_K8s_myAKSCluster_eastus/providers/Microsoft.ManagedIdentity/userAssignedIdentities/myAKSCluster-agentpool"
+    }
+  },
+  "kubernetesVersion": "1.25.6",
+  "linuxProfile": {
+    "adminUsername": "azureuser",
+    "ssh": {
+      "publicKeys": [
+        {
+          "keyData": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDwb079hTJ/kNpqprAh3XA3FY+yyVwZCueuu+n7Jj5wKMIDZpdGWhQ2dlfPpqDBSy040q1yqdykL7OuTZfm5OixMl2q/P99duthgMnCwqrIb72e36LpF0YaOLYbr9xjK63lzSTiXxJmPRNtKYZZtgFMMpyZk6vUMDi/b1aD7y2VXWjdJ+Grs+15dhqs0lMMBTUeffj91LBdcQsPyUEIO43lyV5qcmQEiaZdPzg4pc8hnftsnZ4IMwfhj998vP0FczO/K3VAPD9ugQTCkCNrIQ1Uxx5YkStCytyeBuuCwe1DENwwRfsPm7DLftj1fG1C47ikKtDGh5jdA9w6jkdEKJat"
+        }
+      ]
+    }
+  },
+  "location": "eastus",
+  "maxAgentPools": 100,
+  "name": "myAKSCluster",
+  "networkProfile": {
+    "dnsServiceIp": "10.0.0.10",
+    "ipFamilies": [
+      "IPv4"
+    ],
+    "loadBalancerProfile": {
+      "allocatedOutboundPorts": null,
+      "effectiveOutboundIPs": [
+        {
+          "id": "/subscriptions/207110bf-3935-4cb4-a373-2aab072daf4c/resourceGroups/MC_K8s_myAKSCluster_eastus/providers/Microsoft.Network/publicIPAddresses/03210f63-e2ae-4b4f-8b22-f97e9a306736",
+          "resourceGroup": "MC_K8s_myAKSCluster_eastus"
+        }
+      ],
+      "enableMultipleStandardLoadBalancers": null,
+      "idleTimeoutInMinutes": null,
+      "managedOutboundIPs": {
+        "count": 1,
+        "countIpv6": null
+      },
+      "outboundIPs": null,
+      "outboundIpPrefixes": null
+    },
+    "loadBalancerSku": "Standard",
+    "natGatewayProfile": null,
+    "networkDataplane": null,
+    "networkMode": null,
+    "networkPlugin": "kubenet",
+    "networkPluginMode": null,
+    "networkPolicy": null,
+    "outboundType": "loadBalancer",
+    "podCidr": "10.244.0.0/16",
+    "podCidrs": [
+      "10.244.0.0/16"
+    ],
+    "serviceCidr": "10.0.0.0/16",
+    "serviceCidrs": [
+      "10.0.0.0/16"
+    ]
+  },
+  "nodeResourceGroup": "MC_K8s_myAKSCluster_eastus",
+  "oidcIssuerProfile": {
+    "enabled": false,
+    "issuerUrl": null
+  },
+  "podIdentityProfile": null,
+  "powerState": {
+    "code": "Running"
+  },
+  "privateFqdn": null,
+  "privateLinkResources": null,
+  "provisioningState": "Succeeded",
+  "publicNetworkAccess": null,
+  "resourceGroup": "K8s",
+  "securityProfile": {
+    "azureKeyVaultKms": null,
+    "defender": null,
+    "imageCleaner": null,
+    "workloadIdentity": null
+  },
+  "servicePrincipalProfile": {
+    "clientId": "msi",
+    "secret": null
+  },
+  "sku": {
+    "name": "Base",
+    "tier": "Free"
+  },
+  "storageProfile": {
+    "blobCsiDriver": null,
+    "diskCsiDriver": {
+      "enabled": true
+    },
+    "fileCsiDriver": {
+      "enabled": true
+    },
+    "snapshotController": {
+      "enabled": true
+    }
+  },
+  "supportPlan": "KubernetesOfficial",
+  "systemData": null,
+  "tags": null,
+  "type": "Microsoft.ContainerService/ManagedClusters",
+  "windowsProfile": null,
+  "workloadAutoScalerProfile": {
+    "keda": null
+  }
+}
+tuoxin [ ~ ]$ az aks get-credentials --resource-group K8s --name myAKSCluster
+Merged "myAKSCluster" as current context in /home/tuoxin/.kube/config
+tuoxin [ ~ ]$ kubectl get nodes
+NAME                                STATUS   ROLES   AGE   VERSION
+aks-nodepool1-87155143-vmss000000   Ready    agent   10m   v1.25.6
+aks-nodepool1-87155143-vmss000001   Ready    agent   10m   v1.25.6
+tuoxin [ ~ ]$ ls
+clouddrive  k8s.yaml
+tuoxin [ ~ ]$ kubectl apply -f k8s.yaml
+deployment.apps/backend created
+service/backend-service created
+deployment.apps/frontend created
+service/frontend-service created
+tuoxin [ ~ ]$ kubectl get pods
+NAME                        READY   STATUS    RESTARTS   AGE
+backend-7c48779dd8-8q4v4    1/1     Running   0          84s
+backend-7c48779dd8-9xwwg    1/1     Running   0          84s
+frontend-7465d4db67-rn945   1/1     Running   0          84s
+frontend-7465d4db67-xqjgz   1/1     Running   0          84s
+tuoxin [ ~ ]$ kubectl get services
+NAME               TYPE           CLUSTER-IP     EXTERNAL-IP     PORT(S)        AGE
+backend-service    ClusterIP      10.0.105.202   <none>          80/TCP         2m17s
+frontend-service   LoadBalancer   10.0.220.12    20.185.11.195   80:30431/TCP   2m17s
+kubernetes         ClusterIP      10.0.0.1       <none>          443/TCP        35m
+tuoxin [ ~ ]$ kubectl apply -f https://github.com/cert-manager/cert-manager/releases/download/v1.11.0/cert-manager.yaml
+namespace/cert-manager created
+customresourcedefinition.apiextensions.k8s.io/clusterissuers.cert-manager.io created
+customresourcedefinition.apiextensions.k8s.io/challenges.acme.cert-manager.io created
+customresourcedefinition.apiextensions.k8s.io/certificaterequests.cert-manager.io created
+customresourcedefinition.apiextensions.k8s.io/issuers.cert-manager.io created
+customresourcedefinition.apiextensions.k8s.io/certificates.cert-manager.io created
+customresourcedefinition.apiextensions.k8s.io/orders.acme.cert-manager.io created
+serviceaccount/cert-manager-cainjector created
+serviceaccount/cert-manager created
+serviceaccount/cert-manager-webhook created
+configmap/cert-manager-webhook created
+clusterrole.rbac.authorization.k8s.io/cert-manager-cainjector created
+clusterrole.rbac.authorization.k8s.io/cert-manager-controller-issuers created
+clusterrole.rbac.authorization.k8s.io/cert-manager-controller-clusterissuers created
+clusterrole.rbac.authorization.k8s.io/cert-manager-controller-certificates created
+clusterrole.rbac.authorization.k8s.io/cert-manager-controller-orders created
+clusterrole.rbac.authorization.k8s.io/cert-manager-controller-challenges created
+clusterrole.rbac.authorization.k8s.io/cert-manager-controller-ingress-shim created
+clusterrole.rbac.authorization.k8s.io/cert-manager-view created
+clusterrole.rbac.authorization.k8s.io/cert-manager-edit created
+clusterrole.rbac.authorization.k8s.io/cert-manager-controller-approve:cert-manager-io created
+clusterrole.rbac.authorization.k8s.io/cert-manager-controller-certificatesigningrequests created
+clusterrole.rbac.authorization.k8s.io/cert-manager-webhook:subjectaccessreviews created
+clusterrolebinding.rbac.authorization.k8s.io/cert-manager-cainjector created
+clusterrolebinding.rbac.authorization.k8s.io/cert-manager-controller-issuers created
+clusterrolebinding.rbac.authorization.k8s.io/cert-manager-controller-clusterissuers created
+clusterrolebinding.rbac.authorization.k8s.io/cert-manager-controller-certificates created
+clusterrolebinding.rbac.authorization.k8s.io/cert-manager-controller-orders created
+clusterrolebinding.rbac.authorization.k8s.io/cert-manager-controller-challenges created
+clusterrolebinding.rbac.authorization.k8s.io/cert-manager-controller-ingress-shim created
+clusterrolebinding.rbac.authorization.k8s.io/cert-manager-controller-approve:cert-manager-io created
+clusterrolebinding.rbac.authorization.k8s.io/cert-manager-controller-certificatesigningrequests created
+clusterrolebinding.rbac.authorization.k8s.io/cert-manager-webhook:subjectaccessreviews created
+role.rbac.authorization.k8s.io/cert-manager-cainjector:leaderelection created
+role.rbac.authorization.k8s.io/cert-manager:leaderelection created
+role.rbac.authorization.k8s.io/cert-manager-webhook:dynamic-serving created
+rolebinding.rbac.authorization.k8s.io/cert-manager-cainjector:leaderelection created
+rolebinding.rbac.authorization.k8s.io/cert-manager:leaderelection created
+rolebinding.rbac.authorization.k8s.io/cert-manager-webhook:dynamic-serving created
+service/cert-manager created
+service/cert-manager-webhook created
+deployment.apps/cert-manager-cainjector created
+deployment.apps/cert-manager created
+deployment.apps/cert-manager-webhook created
+mutatingwebhookconfiguration.admissionregistration.k8s.io/cert-manager-webhook created
+validatingwebhookconfiguration.admissionregistration.k8s.io/cert-manager-webhook created
+tuoxin [ ~ ]$ ls
+cert-issuer.yaml  clouddrive  k8s.yaml
+tuoxin [ ~ ]$ kubectl apply -f cert-issuer.yaml
+clusterissuer.cert-manager.io/letsencrypt-production created
+tuoxin [ ~ ]$ kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.5.1/deploy/static/provider/cloud/deploy.yaml
+namespace/ingress-nginx created
+serviceaccount/ingress-nginx created
+serviceaccount/ingress-nginx-admission created
+role.rbac.authorization.k8s.io/ingress-nginx created
+role.rbac.authorization.k8s.io/ingress-nginx-admission created
+clusterrole.rbac.authorization.k8s.io/ingress-nginx created
+clusterrole.rbac.authorization.k8s.io/ingress-nginx-admission created
+rolebinding.rbac.authorization.k8s.io/ingress-nginx created
+rolebinding.rbac.authorization.k8s.io/ingress-nginx-admission created
+clusterrolebinding.rbac.authorization.k8s.io/ingress-nginx created
+clusterrolebinding.rbac.authorization.k8s.io/ingress-nginx-admission created
+configmap/ingress-nginx-controller created
+service/ingress-nginx-controller created
+service/ingress-nginx-controller-admission created
+deployment.apps/ingress-nginx-controller created
+job.batch/ingress-nginx-admission-create created
+job.batch/ingress-nginx-admission-patch created
+ingressclass.networking.k8s.io/nginx created
+validatingwebhookconfiguration.admissionregistration.k8s.io/ingress-nginx-admission created
+tuoxin [ ~ ]$ kubectl get services
+NAME               TYPE           CLUSTER-IP     EXTERNAL-IP     PORT(S)        AGE
+backend-service    ClusterIP      10.0.105.202   <none>          80/TCP         26m
+frontend-service   LoadBalancer   10.0.220.12    20.185.11.195   80:30431/TCP   26m
+kubernetes         ClusterIP      10.0.0.1       <none>          443/TCP        60m
+tuoxin [ ~ ]$ kubectl get services --all-namespaces
+NAMESPACE       NAME                                 TYPE           CLUSTER-IP     EXTERNAL-IP     PORT(S)                      AGE
+cert-manager    cert-manager                         ClusterIP      10.0.3.177     <none>          9402/TCP                     17m
+cert-manager    cert-manager-webhook                 ClusterIP      10.0.244.16    <none>          443/TCP                      17m
+default         backend-service                      ClusterIP      10.0.105.202   <none>          80/TCP                       27m
+default         frontend-service                     LoadBalancer   10.0.220.12    20.185.11.195   80:30431/TCP                 27m
+default         kubernetes                           ClusterIP      10.0.0.1       <none>          443/TCP                      60m
+ingress-nginx   ingress-nginx-controller             LoadBalancer   10.0.182.223   40.88.236.65    80:31056/TCP,443:31812/TCP   3m6s
+ingress-nginx   ingress-nginx-controller-admission   ClusterIP      10.0.211.38    <none>          443/TCP                      3m6s
+kube-system     kube-dns                             ClusterIP      10.0.0.10      <none>          53/UDP,53/TCP                60m
+kube-system     metrics-server                       ClusterIP      10.0.207.56    <none>          443/TCP                      60m
+tuoxin [ ~ ]$ kubectl get certs
+No resources found in default namespace.
+tuoxin [ ~ ]$ kubectl get certs --all-namespaces
+No resources found
+tuoxin [ ~ ]$ kubectl get secrets --all-namespaces
+NAMESPACE       NAME                      TYPE                            DATA   AGE
+cert-manager    cert-manager-webhook-ca   Opaque                          3      19m
+cert-manager    letsencrypt-production    Opaque                          1      12m
+ingress-nginx   ingress-nginx-admission   Opaque                          3      4m32s
+kube-system     bootstrap-token-4x6cro    bootstrap.kubernetes.io/token   4      61m
+kube-system     konnectivity-certs        Opaque                          3      61m
+tuoxin [ ~ ]$ kubectl apply -f k8s.yaml
+deployment.apps/backend unchanged
+service/backend-service unchanged
+deployment.apps/frontend configured
+service/frontend-service configured
+tuoxin [ ~ ]$ kubectl get secrets --all-namespaces
+NAMESPACE       NAME                      TYPE                            DATA   AGE
+cert-manager    cert-manager-webhook-ca   Opaque                          3      22m
+cert-manager    letsencrypt-production    Opaque                          1      15m
+ingress-nginx   ingress-nginx-admission   Opaque                          3      7m39s
+kube-system     bootstrap-token-4x6cro    bootstrap.kubernetes.io/token   4      65m
+kube-system     konnectivity-certs        Opaque                          3      65m
+tuoxin [ ~ ]$ kubectl get services --all-namespaces
+NAMESPACE       NAME                                 TYPE           CLUSTER-IP     EXTERNAL-IP    PORT(S)                      AGE
+cert-manager    cert-manager                         ClusterIP      10.0.3.177     <none>         9402/TCP                     22m
+cert-manager    cert-manager-webhook                 ClusterIP      10.0.244.16    <none>         443/TCP                      22m
+default         backend-service                      ClusterIP      10.0.105.202   <none>         80/TCP                       32m
+default         frontend-service                     ClusterIP      10.0.220.12    <none>         80/TCP                       32m
+default         kubernetes                           ClusterIP      10.0.0.1       <none>         443/TCP                      65m
+ingress-nginx   ingress-nginx-controller             LoadBalancer   10.0.182.223   40.88.236.65   80:31056/TCP,443:31812/TCP   7m48s
+ingress-nginx   ingress-nginx-controller-admission   ClusterIP      10.0.211.38    <none>         443/TCP                      7m48s
+kube-system     kube-dns                             ClusterIP      10.0.0.10      <none>         53/UDP,53/TCP                65m
+kube-system     metrics-server                       ClusterIP      10.0.207.56    <none>         443/TCP                      65m
+tuoxin [ ~ ]$ kubectl apply -f ingress.yaml
+ingress.networking.k8s.io/face-ingress created
+tuoxin [ ~ ]$ kubectl get services --all-namespaces
+NAMESPACE       NAME                                 TYPE           CLUSTER-IP     EXTERNAL-IP    PORT(S)                      AGE
+cert-manager    cert-manager                         ClusterIP      10.0.3.177     <none>         9402/TCP                     30m
+cert-manager    cert-manager-webhook                 ClusterIP      10.0.244.16    <none>         443/TCP                      30m
+default         backend-service                      ClusterIP      10.0.105.202   <none>         80/TCP                       40m
+default         cm-acme-http-solver-w94zg            NodePort       10.0.210.68    <none>         8089:31013/TCP               4s
+default         frontend-service                     ClusterIP      10.0.220.12    <none>         80/TCP                       40m
+default         kubernetes                           ClusterIP      10.0.0.1       <none>         443/TCP                      73m
+ingress-nginx   ingress-nginx-controller             LoadBalancer   10.0.182.223   40.88.236.65   80:31056/TCP,443:31812/TCP   15m
+ingress-nginx   ingress-nginx-controller-admission   ClusterIP      10.0.211.38    <none>         443/TCP                      15m
+kube-system     kube-dns                             ClusterIP      10.0.0.10      <none>         53/UDP,53/TCP                73m
+kube-system     metrics-server                       ClusterIP      10.0.207.56    <none>         443/TCP                      73m
+tuoxin [ ~ ]$ kubectl get certs
+NAME                  READY   SECRET                AGE
+ssl-cert-production   True    ssl-cert-production   25s
